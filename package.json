@@ -1,0 +1,25 @@
+{
+  "name": "playwright-with-typescript-new",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShaikAbdulla7674/Playwright-with-typescript-new.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ShaikAbdulla7674/Playwright-with-typescript-new/issues"
+  },
+  "homepage": "https://github.com/ShaikAbdulla7674/Playwright-with-typescript-new#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.6.0",
+    "allure-commandline": "^2.38.1",
+    "allure-playwright": "^3.7.2"
+  }
+}
