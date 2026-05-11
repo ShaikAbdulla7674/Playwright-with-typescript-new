@@ -6,19 +6,18 @@
 
 # Test info
 
-- Name: AddCourse.spec.ts >> Add Course Test
-- Location: tests\AddCourse.spec.ts:7:5
+- Name: AddEmpDtl.spec.ts >> AddEmployeeData >> should add employee details successfully
+- Location: tests\AddEmpDtl.spec.ts:8:7
 
 # Error details
 
 ```
-Test timeout of 30000ms exceeded.
-```
+Error: locator.click: Error: strict mode violation: locator('//div[@id=\'left-menu\']//span[text()=\'Employee Management\']') resolved to 2 elements:
+    1) <span data-position="right" class="menu-title-text tooltipped" data-tooltip="Employee Management" data-tooltip-id="3f4131f4-f33f-ad93-9629-df68b550f0be">Employee Management</span> aka getByRole('link', { name: 'Employee Management' })
+    2) <span data-position="right" class="menu-title-text tooltipped" data-tooltip="Employee Management" data-tooltip-id="edcc3547-bc22-dc3a-db7b-2f5519a77e65">Employee Management</span> aka getByText('Employee Management').nth(1)
 
-```
-Error: locator.waitFor: Test timeout of 30000ms exceeded.
 Call log:
-  - waiting for getByRole('link', { name: 'Training' }) to be visible
+  - waiting for locator('//div[@id=\'left-menu\']//span[text()=\'Employee Management\']')
 
 ```
 
@@ -144,66 +143,67 @@ Call log:
               - generic [ref=e203]: Employee Management
           - list [ref=e204]:
             - listitem [ref=e205]:
-              - link "oxd_logout_round" [ref=e206] [cursor=pointer]:
+              - link "oxd_logout_round Log Out" [ref=e206] [cursor=pointer]:
                 - /url: /auth/logout
                 - generic [ref=e207]: oxd_logout_round
-              - link "arrow_drop_down" [ref=e209] [cursor=pointer]:
+                - generic [ref=e208]: Log Out
+              - link "arrow_drop_down" [ref=e210] [cursor=pointer]:
                 - /url: javascript:void(0)
-                - generic [ref=e210]: arrow_drop_down
+                - generic [ref=e211]: arrow_drop_down
             - listitem
-        - generic [ref=e212]:
-          - generic [ref=e213]:
-            - link "oxd_home_menu" [ref=e216] [cursor=pointer]:
+        - generic [ref=e213]:
+          - generic [ref=e214]:
+            - link "oxd_home_menu" [ref=e217] [cursor=pointer]:
               - /url: "#/dashboard"
-            - generic [ref=e217]:
-              - link [ref=e220] [cursor=pointer]:
+            - generic [ref=e218]:
+              - link "Employee List" [ref=e221] [cursor=pointer]:
                 - /url: "#/pim/employees"
-              - link [ref=e223] [cursor=pointer]:
+              - link "My Info" [ref=e224] [cursor=pointer]:
                 - /url: "#/pim/my_info"
-              - link [ref=e226] [cursor=pointer]:
+              - link "Directory" [ref=e227] [cursor=pointer]:
                 - /url: "#/corporate_directory/directory"
-              - link [ref=e229] [cursor=pointer]:
+              - link "Buzz" [ref=e230] [cursor=pointer]:
                 - /url: /client/#/buzz/home
-              - generic [ref=e232] [cursor=pointer]: oxd_menu_down
-              - generic [ref=e235] [cursor=pointer]: oxd_menu_down
-              - generic [ref=e238] [cursor=pointer]: oxd_menu_down
-              - generic [ref=e241] [cursor=pointer]: oxd_menu_down
-              - generic [ref=e244] [cursor=pointer]: oxd_menu_down
-              - generic [ref=e247] [cursor=pointer]: oxd_menu_down
-              - link [ref=e250] [cursor=pointer]:
+              - generic [ref=e233] [cursor=pointer]: Announcements oxd_menu_down
+              - generic [ref=e236] [cursor=pointer]: Organization Chart oxd_menu_down
+              - generic [ref=e239] [cursor=pointer]: Competencies oxd_menu_down
+              - generic [ref=e242] [cursor=pointer]: Qualifications oxd_menu_down
+              - generic [ref=e245] [cursor=pointer]: Manage Data oxd_menu_down
+              - generic [ref=e248] [cursor=pointer]: Configurations oxd_menu_down
+              - link "Nationalities" [ref=e251] [cursor=pointer]:
                 - /url: "#/admin/nationalities"
-              - generic [ref=e253] [cursor=pointer]: oxd_menu_down
-              - link [ref=e256] [cursor=pointer]:
+              - generic [ref=e254] [cursor=pointer]: Assets oxd_menu_down
+              - link "iCalendar Feeds" [ref=e257] [cursor=pointer]:
                 - /url: "#/pim/icalendar_feed"
-              - link [ref=e259] [cursor=pointer]:
+              - link "Dashboard" [ref=e260] [cursor=pointer]:
                 - /url: "#/dashboard"
-              - generic [ref=e262] [cursor=pointer]: oxd_menu_down
-              - generic [ref=e265] [cursor=pointer]: oxd_menu_down
-          - list [ref=e267]:
-            - listitem [ref=e268]:
-              - generic [ref=e271] [cursor=pointer]: ohrm_help
-            - listitem [ref=e272]:
-              - generic [ref=e276] [cursor=pointer]: oxd_shortcut
-    - generic [ref=e281]:
-      - generic [ref=e282]:
-        - generic [ref=e283]: widgets
-        - generic [ref=e284]:
-          - generic [ref=e285]: Dashboard
-          - generic [ref=e286]: Configuration
-      - generic [ref=e287]:
-        - list [ref=e288]:
-          - listitem [ref=e289]:
-            - generic [ref=e290] [cursor=pointer]: Admin Configurations
-          - listitem [ref=e291]:
-            - generic [ref=e292] [cursor=pointer]: My Widgets
-        - generic [ref=e295]:
-          - button "Cancel" [ref=e296] [cursor=pointer]
-          - button "Save" [ref=e297] [cursor=pointer]
-      - generic [ref=e300] [cursor=pointer]: ohrm_settings
-    - generic [ref=e302]:
+              - generic [ref=e263] [cursor=pointer]: Discipline oxd_menu_down
+              - generic [ref=e266] [cursor=pointer]: Purge Records oxd_menu_down
+          - list [ref=e268]:
+            - listitem [ref=e269]:
+              - generic [ref=e272] [cursor=pointer]: ohrm_help
+            - listitem [ref=e273]:
+              - generic [ref=e277] [cursor=pointer]: oxd_shortcut
+    - generic [ref=e282]:
+      - generic [ref=e283]:
+        - generic [ref=e284]: widgets
+        - generic [ref=e285]:
+          - generic [ref=e286]: Dashboard
+          - generic [ref=e287]: Configuration
+      - generic [ref=e288]:
+        - list [ref=e289]:
+          - listitem [ref=e290]:
+            - generic [ref=e291] [cursor=pointer]: Admin Configurations
+          - listitem [ref=e292]:
+            - generic [ref=e293] [cursor=pointer]: My Widgets
+        - generic [ref=e296]:
+          - button "Cancel" [ref=e297] [cursor=pointer]
+          - button "Save" [ref=e298] [cursor=pointer]
+      - generic [ref=e301] [cursor=pointer]: ohrm_settings
+    - generic [ref=e303]:
       - text: OrangeHRM 8.0
       - text: © 2005 - 2026
-      - link "OrangeHRM, Inc" [ref=e303] [cursor=pointer]:
+      - link "OrangeHRM, Inc" [ref=e304] [cursor=pointer]:
         - /url: http://www.orangehrm.com
       - text: . All rights reserved.
 ```
@@ -222,26 +222,28 @@ Call log:
   9  | 
   10 |   // Locators
   11 |   private leftpanelEMPManagementbutton(){
-  12 |     return this.page.locator("//div[@id='left-menu']//span[text()='Employee Management']");
-  13 |   }
-  14 |   private trainingTab(){
-  15 |     return this.page.locator("//div[@id='left-menu']//span[text()='Training']");
-  16 |   }
-  17 |   // Actions
-  18 |   async gotoEmployeeManagementPage() {
-  19 |     await this.leftpanelEMPManagementbutton().click()
-  20 |   }
-  21 | 
-  22 |   async gotoTraineePage() {
-  23 |     //await this.trainingTab().click();
-  24 |    // await this.page.getByRole('link', { name: 'Training' }).click();
-  25 |     //await this.page.locator('#left-menu >> text=Training').click();
-  26 |    const trainingLink = this.page.getByRole('link', { name: 'Training' });
-  27 | 
-> 28 |    await trainingLink.waitFor({ state: 'visible' });
-     |                       ^ Error: locator.waitFor: Test timeout of 30000ms exceeded.
-  29 |    await trainingLink.scrollIntoViewIfNeeded();
-  30 |    await trainingLink.click();
-  31 |   }
-  32 | }
+  12 |     // return this.page.locator("//div[@id='left-menu']//span[text()='Employee Management']");
+  13 |     
+  14 |   }
+  15 |   private trainingTab(){
+  16 |     return this.page.locator("//div[@id='left-menu']//span[text()='Training']");
+  17 |   }
+  18 |   // Actions
+> 19 |   async gotoEmployeeManagementPage() {
+     |                                               ^ Error: locator.click: Error: strict mode violation: locator('//div[@id=\'left-menu\']//span[text()=\'Employee Management\']') resolved to 2 elements:
+  20 |     //await this.leftpanelEMPManagementbutton().click()
+  21 |     await this.page.getByRole('link', { name: 'Employee Management' }).click();
+  22 |   }
+  23 | 
+  24 |   async gotoTraineePage() {
+  25 |     //await this.trainingTab().click();
+  26 |    // await this.page.getByRole('link', { name: 'Training' }).click();
+  27 |     //await this.page.locator('#left-menu >> text=Training').click();
+  28 |    const trainingLink = this.page.getByRole('link', { name: 'Training' });
+  29 | 
+  30 |    await trainingLink.waitFor({ state: 'visible' });
+  31 |    await trainingLink.scrollIntoViewIfNeeded();
+  32 |    await trainingLink.click();
+  33 |   }
+  34 | }
 ```

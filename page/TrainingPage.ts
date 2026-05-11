@@ -1,4 +1,4 @@
-import { Page, expect } from '@playwright/test';
+import { Locator, Page, expect } from '@playwright/test';
 
 export class TrainingPage {
   private page: Page;
@@ -8,7 +8,14 @@ export class TrainingPage {
   constructor(page: Page) {
     this.page = page;
   }
-
+ //Locators 
+  private addCourseButton():Locator { return this.page.locator("//div[@id='list_item_add']");}
+  private courseTitle(): Locator { return this.page.locator("//input[@id='addCourse_title']"); } 
+  private coordinator(): Locator { return this.page.locator("//input[@id='addCourse_coordinator_empName']"); }
+  private courseSaveButton():Locator 
+  { 
+    return this.page.locator("//a[@id='btnSaveCourse']"); 
+  }
   private frame() {
     return this.page.frameLocator("iframe");
   }
@@ -20,22 +27,23 @@ export class TrainingPage {
     await frame.locator('#preloader').waitFor({ state: 'hidden' });
    
     // Click Add Course
-    const addBtn = frame.locator('#list_item_add');
-    await expect(addBtn).toBeVisible();
+    const addBtn = frame.locator(this.addCourseButton());
     await addBtn.waitFor({ state: 'visible', timeout: 20000 });
+    await expect(addBtn).toBeVisible();
     await addBtn.click();
 
     // Fill Title
-    const tittletxtbox=frame.getByLabel('Title *');
-    await tittletxtbox.waitFor({ state: 'visible', timeout: 20000 });
+    const tittletxtbox=frame.locator(this.courseTitle());
+     await tittletxtbox.click();
     await tittletxtbox.fill(this.titleName);
     // Fill Coordinator (IMPORTANT: select from dropdown)
-    const coordinator = frame.getByPlaceholder('Type for hints...');
+    const coordinator = frame.locator(this.coordinator());
+    await coordinator.click();
     await coordinator.fill(this.coordinatorName);
     await frame.getByText(this.coordinatorName, { exact: true }).click();
 
     // Click Save
-    const saveBtn = frame.locator('#btnSaveCourse');
+    const saveBtn = frame.locator(this.courseSaveButton());
     await expect(saveBtn).toBeEnabled();
 
     await saveBtn.click();
@@ -52,7 +60,7 @@ export class TrainingPage {
 
     await expect(titleLocator).toBeVisible({ timeout: 10000 });
     await expect(coordLocator).toBeVisible({ timeout: 10000 });
-
+    
     return true;
   }
 }
